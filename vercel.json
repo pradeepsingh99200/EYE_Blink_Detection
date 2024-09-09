@@ -2,7 +2,7 @@
 {
     "builds": [
       {
-        "src": "BlinkDetection/wegi.py",
+        "src": "index.html/@vercel/static",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime":"python3.12"}
       }
@@ -12,10 +12,5 @@
         "src": "/(.*)",
         "dest": "BlinkDetection/wegi.py"
       }
-    {
-  "scripts": {
-    "build": "[Django] build --output public"
-  }
-    }
     ]
   }
