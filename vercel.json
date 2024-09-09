@@ -1,16 +1,18 @@
-
 {
-    "builds": [
-      {
-        "src": "index.html/@vercel/static",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime":"python3.12"}
+  "builds": [
+    {
+      "src": "BlinkDetection/wsgi.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "15mb",
+        "runtime": "python3.12"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "BlinkDetection/wegi.py"
-      }
-    ]
-  }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "BlinkDetection/wsgi.py"
+    }
+  ]
+}
